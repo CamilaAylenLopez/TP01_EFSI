@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/archivo.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1 class="titulo">Primer trabajo practico de DAI</h1>
+
+   <div class="cuadro">
+        <form action="POST">
+            <div class="cuerpo">
+                <div class="margentexto">
+                    <label><b>Nota de Matematica</b></label> <br>
+                    <input class="deco" deco type="text" placeholder="Ingrese su nota" id="matematica" required> 
+                </div>
+    
+                <div class="margentexto">
+                    <label><b>Nota de Lengua</b></label> <br>
+                    <input class="deco" type="text" placeholder="Ingrese su nota" id="lengua" required> 
+                </div>
+    
+                <div class="margentexto">
+                    <label><b>Nota de EFSI</b></label> <br>
+                    <input class="deco" type="text" placeholder="Ingrese su nota" id="efsi" required> 
+                </div>
+                
+                <button class="margentexto boton col-12 col-xl-2" type="button" onclick="CalcularPromedio()"> Calcular Promedio </button>
+    
+                <button class="margentexto boton col-12 col-xl-2" type="button" onclick="Mayornota()"> En cual materia te fue mejor </button>
+                
+                <div id="nose">
+    
+                </div>
+            </div>
+        </form>
+    </div>
+    <img class="centrar" id="image" src="https://i.pinimg.com/originals/2d/6e/1a/2d6e1a752ef5689aee2fe07061d0ff57.gif">
+</body>
+</html>
