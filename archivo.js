@@ -1,11 +1,14 @@
 var datoscorrectos = true
 
 function imagen(resultado){
-    if(resultado>=6){
+    if(resultado>=6 && resultado>=0){
         document.getElementById('image').style.display = "block"; document.getElementById('image').src="https://i.pinimg.com/originals/80/89/67/80896736380a6349a49ee228a74dc632.gif";
     }
-    else{
+    else if(resultado<6 && resultado>=0){
         document.getElementById('image').style.display = "block"; document.getElementById('image').src="https://media.tenor.com/HseHXaJz2OAAAAAM/sad-cry.gif";
+    }
+    else{
+        document.getElementById('image').style.display = "block"; document.getElementById('image').src="https://media.tenor.com/7r-BGEoIohkAAAAM/meme-cat.gif";
     }
 }
 
@@ -73,9 +76,13 @@ function CalcularPromedio()
   var m1 = parseInt(document.getElementById("matematica").value);
   var m2 = parseInt(document.getElementById("lengua").value);
   var m3 = parseInt(document.getElementById("efsi").value);
-  
+
   ValidarDatosCampos()
   Validardatosnumeros()
+  if(Validardatosnumeros()){
+    imagen(-1)
+  }
+  
   if(Validardatosnumeros()){
     imprimirResultado("Los numeros deben ser entre 1 y 10")
   }
@@ -93,6 +100,7 @@ function CalcularPromedio()
         imprimirResultado("Tu promedio fue " + materia)
     }
   }
+  
 
 }
 
