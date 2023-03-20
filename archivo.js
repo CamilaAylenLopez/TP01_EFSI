@@ -17,8 +17,6 @@ function ValidarDatosCampos(){
     var m2 = parseInt(document.getElementById("lengua").value);
     var m3 = parseInt(document.getElementById("efsi").value);
 
-    var camposincompletos = false;
-
     if(isNaN(m1) || isNaN(m2) || isNaN(m3)){
         datoscorrectos = false
         alert("¡¡Debes completar todos los campos con números!!");
@@ -84,6 +82,7 @@ function CalcularPromedio()
   }
   
   if(Validardatosnumeros()){
+    document.getElementById("nose").style.color  = "black"
     imprimirResultado("Los numeros deben ser entre 1 y 10")
   }
   else{
@@ -114,6 +113,7 @@ function Mayornota()
     ValidarDatosCampos()
     Validardatosnumeros()
     if(Validardatosnumeros()){
+        document.getElementById("nose").style.color  = "black"
         imprimirResultado("Los numeros deben ser entre 1 y 10")
     }
     else{
